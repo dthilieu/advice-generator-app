@@ -7,12 +7,43 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Advice Generator App</title>
+
+  <script>
+
+    async function fetchAdvice(){
+
+      try{
+
+        const response = await fetch("https://api.adviceslip.com/advice");
+
+        if(!response.ok){
+          throw new Error("Could not fetch resource")
+        }
+
+        const data = await response.json();
+        const advice = document.getElementById("advice");
+        const adviceId = document.getElementById("adviceId");
+
+        advice.textContent = data.slip.advice;
+        adviceId.textContent = data.slip.id;
+
+        console.log(data);
+
+      }
+      catch(error){
+        console.log(error);
+      }
+
+    }
+
+    window.onload = fetchAdvice;
+
+  </script>
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
+  <div>ADVICE #<span id="adviceId"></span></div>
+  <div id="advice"></div>
   
 </body>
 </html>
