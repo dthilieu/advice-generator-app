@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles.css">
   
   <title>Advice Generator App</title>
 
@@ -24,11 +30,8 @@
         const advice = document.getElementById("advice");
         const adviceId = document.getElementById("adviceId");
 
-        advice.textContent = data.slip.advice;
-        adviceId.textContent = data.slip.id;
-
-        console.log(data);
-
+        advice.textContent = '"' + data.slip.advice + '"';
+        adviceId.textContent = "ADVICE #" + data.slip.id;
       }
       catch(error){
         console.log(error);
@@ -37,13 +40,22 @@
     }
 
     window.onload = fetchAdvice;
-
   </script>
 </head>
 <body>
 
-  <div>ADVICE #<span id="adviceId"></span></div>
-  <div id="advice"></div>
-  
+  <div class="advice-container center">
+    <div class="advice-id" id="adviceId"></div>
+    <div class="advice" id="advice"></div>
+
+    <div class="img-container">
+      <img class="img-desktop" src="images/pattern-divider-desktop.svg" alt="pattern-divider-desktop">
+      <img class="img-mobile" src="images/pattern-divider-mobile.svg" alt="pattern-divider-mobile">
+      <div onclick="fetchAdvice()" class="icon-dice-container">
+        <img class="icon-dice" src="images/icon-dice.svg" alt="icon-dice">
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
