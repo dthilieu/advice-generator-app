@@ -2,13 +2,18 @@ body {
     font-family: "Manrope", sans-serif;
     background-color: hsl(218, 23%, 16%);
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    margin: 0;
+    padding: 0;    
+    height: 100vh; /*makes the body take up the full viewport height, 
+    important to center div vertically and horizontally */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 376px) {
+
     .advice-container {
         width: 500px;
     }
@@ -23,12 +28,21 @@ body {
 }
 
 @media (max-width: 375px) {
+    body {
+        width: 100%;
+    }
+    .advice-container {
+        margin: 20px;
+        width: 75%;
+    }
+
     .img-desktop {
         display: none;
     }
 
     .img-mobile {
         display: block;
+        width: 100%;
     }
 }
 
@@ -38,11 +52,9 @@ body {
 
     padding: 35px 30px 70px 30px;
     border-radius: 15px;
-
-    margin: 50px;
 }
 
-.advice-id {
+#adviceId {
     color: hsl(150, 100%, 66%);
     font-size: 15px;
     font-weight: 400px;
@@ -51,7 +63,7 @@ body {
     margin-bottom: 20px;
 }
 
-.advice {
+#advice {
     color: hsl(193, 38%, 86%);
     font-size: 28px;
 
@@ -59,6 +71,7 @@ body {
 }
 
 .img-container {
+    /*To have dice button relative to partern divider*/
     position: relative;
 
     display: flex;
@@ -71,6 +84,7 @@ body {
     border-radius: 50%;
     background-color: hsl(150, 100%, 66%);
 
+    /*Position absolute with partern divider*/
     position: absolute;
     bottom: -125px;
     left: 50%;
