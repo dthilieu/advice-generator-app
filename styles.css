@@ -18,6 +18,14 @@ body {
         width: 500px;
     }
 
+    #adviceId {
+        font-size: 15px;
+    }
+
+    #advice {
+        font-size: 28px;
+    }
+
     .img-desktop {
         display: block;
     }
@@ -32,8 +40,16 @@ body {
         width: 100%;
     }
     .advice-container {
-        margin: 20px;
-        width: 75%;
+        box-sizing: border-box;
+        width: calc(100% - 30px);
+    }
+
+    #adviceId {
+        font-size: 12px;
+    }
+
+    #advice {
+        font-size: 24px;
     }
 
     .img-desktop {
@@ -56,7 +72,6 @@ body {
 
 #adviceId {
     color: hsl(150, 100%, 66%);
-    font-size: 15px;
     font-weight: 400px;
     letter-spacing: 4px;
 
@@ -65,7 +80,6 @@ body {
 
 #advice {
     color: hsl(193, 38%, 86%);
-    font-size: 28px;
 
     margin-bottom: 25px;
 }
