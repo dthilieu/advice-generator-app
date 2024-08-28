@@ -10,6 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
 @media (min-width: 501px) {
@@ -31,7 +33,6 @@ body {
 }
 
 @media (min-width: 601px) {
-
     .advice-container {
         width: 500px;
     }
@@ -45,9 +46,6 @@ body {
 }
 
 @media (max-width: 500px) {
-    body {
-        width: 100%;
-    }
     .advice-container {
         box-sizing: border-box;
         width: calc(100% - 30px);
