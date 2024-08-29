@@ -51,9 +51,21 @@
     <div class="img-container">
       <img class="img-desktop" src="images/pattern-divider-desktop.svg" alt="pattern-divider-desktop">
       <img class="img-mobile" src="images/pattern-divider-mobile.svg" alt="pattern-divider-mobile">
-      <div onclick="fetchAdvice()" class="icon-dice-container">
+      <div onclick="fetchAdvice()" class="icon-dice-container" id="iconDice">
         <img class="icon-dice" src="images/icon-dice.svg" alt="icon-dice">
       </div>
+
+      <script>
+        const iconDice = document.getElementById("iconDice");
+
+        iconDice.addEventListener("touchstart", () => {
+          iconDice.classList.add("active");
+        });
+
+        iconDice.addEventListener("touchend", () => {
+          iconDice.classList.remove("active");
+        });
+      </script>
     </div>
   </div>
 

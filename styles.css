@@ -115,9 +115,11 @@ body {
     cursor: pointer;
 
     transition: box-shadow 0.15s;
+
+    user-select: none; /*Prevent text selection*/
 }
 
-.icon-dice-container:hover {
+.icon-dice-container:hover, .icon-dice-container.active {
     box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
 }
 
