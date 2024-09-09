@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dthilieu/advice-generator-app)
-- Live Site URL: [Add live site URL here](https://dthilieu.github.io/advice-generator-app/)
+- [Solution URL](https://github.com/dthilieu/advice-generator-app)
+- [Live Site URL](https://dthilieu.github.io/advice-generator-app/)
 
 ## My process
 
@@ -48,25 +48,15 @@ Users should be able to:
 
 ### What I learned
 
-- Async function in JavaScript and API interaction
+- Async function in JavaScript and API interaction: Learn how to use async function to get content from a live API
 
-Learn how to use async function to get content from a live API
+- CSS mobile-first workflow: Approach building website with mobile-first workflow, then use media query to adjust website on larger screen for easier maintenance and clean, tidy code
 
-- CSS mobile-first workflow
+- BEM naming convention for CSS: Applied BEM naming convention in class name of CSS for better CSS structruring
 
-Approach building website with mobile-first workflow, then use media query to adjust website on larger screen for easier maintenance and clean, tidy code
+- CSS custom properties: Learn to set CSS variables for better maintenance and reusable code in CSS
 
-- BEM naming convention for CSS
-
-Applied BEM naming convention in class name of CSS for better CSS structruring
-
-- CSS custom properties
-
-Learn to set CSS variables for better maintenance and reusable code in CSS
-
-- Flexbox
-
-Learn to use Flexbox to center elements on the page
+- Flexbox: Learn to use Flexbox to center elements on the page
 
 ### Continued development
 
